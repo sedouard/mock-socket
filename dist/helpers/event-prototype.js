@@ -31,11 +31,9 @@ var EventPrototype = (function () {
       var bubbles = arguments.length <= 1 || arguments[1] === undefined ? false : arguments[1];
       var cancelable = arguments.length <= 2 || arguments[2] === undefined ? false : arguments[2];
 
-      Object.assign(this, {
-        type: String(type),
-        bubbles: Boolean(bubbles),
-        cancelable: Boolean(cancelable)
-      });
+      this.type = String(type);
+      this.bubbles = Boolean(bubbles);
+      this.cancelable = Boolean(cancelable);
     }
   }]);
 
