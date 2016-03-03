@@ -139,6 +139,13 @@ class SocketIO extends EventTarget {
   }
 
   /*
+  * For managing connections
+  */
+  on*(type, callback) {
+    this.addEventListener(type, callback);
+  }
+
+  /*
    * Join a room on a server
    *
    * http://socket.io/docs/rooms-and-namespaces/#joining-and-leaving
