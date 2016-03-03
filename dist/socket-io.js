@@ -194,6 +194,15 @@ var SocketIO = (function (_EventTarget) {
     }
 
     /*
+    * For connection management
+    */
+  }, {
+    key: 'once',
+    value: function once(type, callback) {
+      this.addEventListener(type, callback);
+    }
+
+    /*
      * Join a room on a server
      *
      * http://socket.io/docs/rooms-and-namespaces/#joining-and-leaving
